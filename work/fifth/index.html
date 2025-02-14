@@ -88,6 +88,11 @@
       $(".select").change(function () {
         let selected = $(this).val();
 
+        if (selected === "all") {
+          $(".list li").show();
+          return;
+        }
+
         $(".list li").each(function (index, element) {
           let category = $(element).data("category-type");
           if (selected === category) {
