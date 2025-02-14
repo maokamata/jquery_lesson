@@ -50,7 +50,7 @@
     $(function () {
       $("ul.menu__list li").hover(
         function () {
-          $(".menu__list__childList:not(:animated)", this).slideDown();
+          $(".menu__list__childList", this).stop().slideDown();
         },
         function () {
           $(".menu__list__childList", this).stop().slideUp();
